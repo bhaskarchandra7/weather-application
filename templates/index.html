@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    
+    <script src="https://kit.fontawesome.com/9744ec0a5d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <nav class="nav">welcome,
+                <a class="login/singnup" href="/signup">
+                <button class="btn" >Login/Signup</button>
+              </a>
+            </nav>
+        </nav>
+    </header>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+    <div class="container">
+        <h1>Weather App</h1>
+        <input type="text" id="city" name="city" placeholder="Enter city name">
+        <button id="getWeather">Get Weather</button>
+        <div id="weatherInfo"></div>
+    </div>
+   
+    </form>
+    <div class="container">
+        <h2>the weather in the city </h2>
+        <p>country code : {{country_code}}</p>
+        <p>temprarure : {{temp}}</p>
+        <p>pressure : {{pres}} </p>
+        
+    </div>
+    <footer>
+        <nav> 
+            this website is made for project purpose !
+            <div class="contact">
+                <a href="https://instagram.com/bhaskarpandit_73?igshid=NjIwNzIyMDk2Mg=="><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/bhaskarchandra7"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/bhaskar-chandra-06b941251"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/bhashker.bhashker.3?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </nav>
+    </footer>
+
+
+
+</body>
+</html>
